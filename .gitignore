@@ -18,3 +18,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+/docs/javascript/root.mdx
+/docs/react/root.mdx
+/docs/machine-coding/root.mdx
+/docs/dsa/root.mdx
