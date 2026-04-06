@@ -20,6 +20,14 @@ yarn-debug.log*
 yarn-error.log*
 
 /docs/javascript/root.mdx
+/docs/javascript/expert.mdx
+/docs/javascript/intermediate.mdx
+
+
+
+
+
+
 /docs/react/root.mdx
 /docs/machine-coding/root.mdx
 /docs/dsa/root.mdx
