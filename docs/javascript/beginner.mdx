@@ -26,10 +26,15 @@ function App() {
 
 Try it yourself:
 
-<JSPlayground code={`// Type coercion in action
-console.log(1 + "2" + 3);
+<JSPlayground
+  code={`function App() {
+  return (
+    <>
+      <h1>I'm a playground!</h1>
+      <p>You can edit this text.</p>
+    </>
+  );
+}
 
-// Step by step:
-// 1 + "2" → "12" (number coerced to string)
-// "12" + 3 → "123" (same thing)
-`} />
+export default App;`}
+/>
