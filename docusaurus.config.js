@@ -1,34 +1,36 @@
 // @ts-check
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Interview Prep',
-  tagline: 'Master your technical interviews',
-  favicon: 'img/favicon.ico',
+  title: "Interview Prep",
+  tagline: "Master your technical interviews",
+  favicon: "img/favicon.ico",
 
-  url: 'https://interview-prep.example.com',
-  baseUrl: '/',
+  url: "https://interview-prep.example.com",
+  baseUrl: "/",
 
-  onBrokenLinks: 'ignore',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "ignore",
+  onBrokenMarkdownLinks: "warn",
 
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
+
+  themes: ["@docusaurus/theme-live-codeblock"],
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: './sidebars.js',
+          sidebarPath: "./sidebars.js",
         },
         blog: false,
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
       }),
     ],
@@ -38,29 +40,29 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Interview Prep',
+        title: "Interview Prep",
         logo: {
-          alt: 'Logo',
-          src: 'img/logo.svg',
+          alt: "Logo",
+          src: "img/logo.svg",
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Preparation',
+            type: "docSidebar",
+            sidebarId: "tutorialSidebar",
+            position: "left",
+            label: "Preparation",
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: 'Docs',
+            title: "Docs",
             items: [
               {
-                label: 'Introduction',
-                to: '/docs/intro',
+                label: "Introduction",
+                to: "/docs/intro",
               },
             ],
           },

@@ -3,5 +3,33 @@ title: Beginner
 slug: beginner
 ---
 
+import JSPlayground from "@site/src/components/Playground";
+
 # JavaScript Beginner
+
 Master variables, data types, and flow control.
+
+```js live
+// This becomes an editable + runnable code block
+function App() {
+  const [count, setCount] = React.useState(0);
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+    </div>
+  );
+}
+```
+
+### 1. What will `console.log(1 + "2" + 3)` print?
+
+Try it yourself:
+
+<JSPlayground code={`// Type coercion in action
+console.log(1 + "2" + 3);
+
+// Step by step:
+// 1 + "2" → "12" (number coerced to string)
+// "12" + 3 → "123" (same thing)
+`} />

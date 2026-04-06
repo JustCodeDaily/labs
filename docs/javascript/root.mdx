@@ -1,0 +1,205 @@
+---
+title: root
+slug: root
+---
+
+# JavaScript Interview Questions
+
+---
+
+## Beginner
+
+### Verbal Questions
+
+1. What's the difference between `var`, `let`, and `const`?
+2. What are primitive data types in JavaScript?
+3. What is hoisting? Does it apply to all declarations?
+4. Explain `==` vs `===`.
+5. What is `typeof` and what quirk does `typeof null` have?
+6. What is `NaN`? How do you check for it?
+7. What are template literals and why are they useful?
+8. What is the difference between `undefined` and `null`?
+9. What is type coercion? Give an example.
+10. What does `"use strict"` do?
+
+### One-Liners / Small Snippets
+
+1. What will `console.log(1 + "2" + 3)` print?
+2. What's the output of `console.log(typeof [])` ?
+3. What does `Boolean("")` return?
+4. What will `console.log(0.1 + 0.2 === 0.3)` output?
+5. What does `"hello".split("").reverse().join("")` return?
+6. What's the output of `console.log([] == false)` ?
+7. What will `let a; console.log(a)` print?
+8. What does `parseInt("123abc")` return?
+9. What's the output of `console.log(3 > 2 > 1)` ?
+10. What does `[1,2,3].indexOf(4)` return?
+
+### Write a Function
+
+1. Write a function to reverse a string.
+2. Write a function to check if a number is even or odd.
+3. Write a function that returns the largest number in an array.
+4. Write a function to count vowels in a string.
+5. Write a function to remove duplicates from an array.
+6. Write a function to check if a string is a palindrome.
+7. Write a function that capitalizes the first letter of each word.
+8. Write a function to flatten a nested array (one level deep).
+9. Write a function that truncates a string to N characters and adds "...".
+10. Write a function to merge two sorted arrays into one sorted array.
+
+### Full Concept
+
+1. Build a simple calculator that takes two numbers and an operator as inputs.
+2. Implement a basic stopwatch using `setInterval` (start, stop, reset).
+3. Create a function that mimics `Array.prototype.map` from scratch.
+4. Build a character counter that tracks how many times each character appears in a string.
+5. Implement a basic to-do list in the console (add, remove, list tasks using an array).
+
+---
+
+## Intermediate
+
+### Verbal Questions
+
+1. What is a closure and why does it matter?
+2. Explain the event loop. What's the difference between microtasks and macrotasks?
+3. What is the difference between `call`, `apply`, and `bind`?
+4. What are Promises? How do they differ from callbacks?
+5. Explain prototypal inheritance.
+6. What is the `this` keyword and how does its value change in different contexts?
+7. What is event delegation and why is it useful?
+8. What's the difference between shallow copy and deep copy?
+9. Explain `async/await` and how error handling works with it.
+10. What are WeakMap and WeakSet? When would you use them?
+
+### One-Liners / Small Snippets
+
+1. What will this print and why?
+
+```js
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), 1000);
+}
+```
+
+2. What's the output of `console.log([..."hello"])` ?
+3. What does `Promise.resolve(1).then(console.log)` output and when?
+4. What will `{a: 1} === {a: 1}` return?
+5. What's the output of `console.log(typeof NaN === "number")` ?
+6. What does `[1,2,3].reduce((a, b) => a + b, 0)` return?
+7. What will this output?
+
+```js
+const obj = { a: 1 };
+const copy = obj;
+copy.a = 2;
+console.log(obj.a);
+```
+
+8. What's the output of `console.log("b" + "a" + +"a" + "a")` ?
+9. What does `Object.keys({a:1, b:2, c:3}).length` return?
+10. What's the output?
+
+```js
+const fn = () => arguments;
+fn(1, 2, 3);
+```
+
+### Write a Function
+
+1. Write a debounce function.
+2. Write a throttle function.
+3. Write a deep clone function (handle objects and arrays).
+4. Write a function that implements `Promise.all` from scratch.
+5. Write a currying function that converts `add(1, 2, 3)` to `add(1)(2)(3)`.
+6. Write a function that retries an async operation N times before failing.
+7. Write a memoize function.
+8. Write a function to flatten a deeply nested array (any depth).
+9. Write a pipe/compose function.
+10. Write an event emitter class (on, off, emit).
+
+### Full Concept
+
+1. Build a pub/sub (observer) pattern implementation.
+2. Implement a simple Promise class with `then`, `catch`, and `resolve`.
+3. Build a rate limiter that limits function calls to N per second.
+4. Create a lazy-loading image observer using IntersectionObserver.
+5. Implement a mini templating engine that replaces `{{variable}}` placeholders with values from an object.
+
+---
+
+## Expert
+
+### Verbal Questions
+
+1. How does the V8 engine optimize JavaScript? What are hidden classes and inline caches?
+2. Explain the difference between the memory heap and call stack. How does garbage collection work (mark-and-sweep)?
+3. What are generators and iterators? When would you prefer them over async/await?
+4. Explain the Proxy and Reflect APIs. What real-world patterns do they enable?
+5. What is tail call optimization and does JavaScript support it?
+6. How do you handle memory leaks in JavaScript? What are common causes?
+7. Explain structured cloning vs JSON serialization for deep copying.
+8. What is the Temporal Dead Zone in detail and how does it interact with closures?
+9. How do SharedArrayBuffer and Atomics work for multi-threaded JavaScript?
+10. What are the differences between ES modules and CommonJS at a runtime level?
+
+### One-Liners / Small Snippets
+
+1. What's the output and why?
+
+```js
+async function foo() {
+  return 1;
+}
+foo().then(console.log);
+console.log(2);
+```
+
+2. What does `Symbol("a") === Symbol("a")` return?
+3. What happens here?
+
+```js
+const target = {};
+const proxy = new Proxy(target, {
+  get: (obj, prop) => (prop in obj ? obj[prop] : 42),
+});
+console.log(proxy.anything);
+```
+
+4. What's the output?
+
+```js
+function* gen() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+const it = gen();
+console.log([...it]);
+console.log([...it]);
+```
+
+5. What will this print?
+
+```js
+queueMicrotask(() => console.log(1));
+setTimeout(() => console.log(2), 0);
+console.log(3);
+```
+
+### Write a Function
+
+1. Implement `Function.prototype.bind` from scratch.
+2. Write a concurrent task runner that limits N parallel async operations.
+3. Implement a reactive system (like Vue's `ref` and `watchEffect`) using Proxy.
+4. Write a JSON parser from scratch (no `JSON.parse`).
+5. Implement cooperative multitasking using generators.
+
+### Full Concept
+
+1. Build a virtual DOM diffing algorithm (create, diff, patch).
+2. Implement a module bundler that resolves dependencies from a dependency graph.
+3. Build a full-featured Promise implementation (then chaining, error propagation, `Promise.race`, `Promise.allSettled`).
+4. Create a garbage-collector simulator that demonstrates mark-and-sweep.
+5. Build a reactive state management library with computed properties and watchers.
